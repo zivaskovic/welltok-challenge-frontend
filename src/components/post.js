@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import {Button, Badge } from 'react-bootstrap';
+import {Button, Badge, Spinner } from 'react-bootstrap';
 import {connect} from 'react-redux';
 import * as actionCreators from '../actions/posts.js';
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 class Post extends Component {
@@ -56,8 +56,8 @@ class Post extends Component {
     }
     return  (
 
-      <div class="megakul">
-        { this.props.postsData.isLoading === true ? "LOADING" : postRender }
+      <div class="post-container">
+        { this.props.postsData.isLoading === true ? <Spinner animation="border" variant="primary"/> : postRender }
       </div>
     )
   }

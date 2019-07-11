@@ -1,4 +1,4 @@
-
+import {FETCH_ALL_POSTS} from '../constants/posts.js'
 
 const mainReducer =(state, action) => {
   if (state === undefined) {
@@ -6,7 +6,7 @@ const mainReducer =(state, action) => {
       isLoading: true
     }
   }
-  if (action.type === "FETCH_ALL_POSTS") {
+  if (action.type === FETCH_ALL_POSTS) {
       return {
         ...state,
        posts: action.posts.posts,

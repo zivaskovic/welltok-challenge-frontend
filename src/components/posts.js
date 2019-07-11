@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Jumbotron, Container, Button, Accordion, Card, Badge } from 'react-bootstrap';
+import { Jumbotron, Container, Button, Accordion, Card, Spinner } from 'react-bootstrap';
 import './posts.css';
 import {connect} from 'react-redux';
 import * as actionCreators from '../actions/posts.js';
@@ -21,10 +21,10 @@ class Posts extends Component {
     let posts  = ""
     if (this.props.postsData.isLoading === false) {
        posts = (this.props.postsData.posts).map(post => (
-        <Link to="/">
+        <Link to="/" style={{ textDecoration: 'none' }}>
           <Jumbotron fluid key={post.id}>
               <Container className="posts">
-                <Link to={`/posts/${post.id}`}><h1 as={Button} font-family="Cantarell" >{post.title}</h1></Link>
+                <Link to={`/posts/${post.id}`}><h1 as={Button} style={{ textDecoration: 'none' }} font-family="Cantarell" >{post.title}</h1></Link>
                 <p>
                 <Accordion defaultActiveKey="0">
                     <Card>
@@ -35,7 +35,7 @@ class Posts extends Component {
                       </Card.Header>
                       <Accordion.Collapse eventKey="1">
                         <Card.Body>
-                        <p>
+                        <p className="posts-description">
                         {`${this.shortDescription(post.description)}...`}
                         </p>
                         </Card.Body>
@@ -52,8 +52,9 @@ class Posts extends Component {
 
     return (
 
-      <div class="megakul">
-        { this.props.postsData.isLoading === true ? "LOADING" : posts }
+      <div className="post-container">
+        <h1 className="all-posts">ALL POSTS</h1>
+        { this.props.postsData.isLoading === true ? <Spinner animation="border" variant="primary" className="spinner"/> : posts }
       </div>
 
     )

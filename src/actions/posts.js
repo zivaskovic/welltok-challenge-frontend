@@ -1,3 +1,4 @@
+import {FETCH_ALL_POSTS} from '../constants/posts.js'
 import axios from "axios";
 
 export function loadAllPosts(){
@@ -10,7 +11,7 @@ export function loadAllPosts(){
 
 export function fetchAllPosts(posts){
   return{
-    type: "FETCH_ALL_POSTS",
+    type: FETCH_ALL_POSTS,
     posts: posts
   }
 }

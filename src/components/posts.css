@@ -7,6 +7,19 @@ h1 {
   width: 70%;
   margin: auto;
 }
+.all-posts {
+  color: gray;
+}
+.post-container {
+  margin:auto;
+  text-align: center;
+}
+
+.spinner {
+
+  margin: auto;
+  margin-top: 100px;
+}
 
 .jumbotron.jumbotron-fluid {
   background-color: #66C0F7;
@@ -37,6 +50,19 @@ h1 {
   border-radius: 5px;
   box-shadow: 0px 0px 25px gray;
   margin-bottom: 20px;
+
+}
+
+.posts-description {
+  width: 85%;
+  margin: auto;
+  background-color: #A3D9FA;
+  color: black;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px gray;
+  margin-bottom: 20px;
+  text-decoration: none;
 
 }
 

@@ -1,7 +1,15 @@
-##TO START THE APPLICATION
+## TO START THE APPLICATION
 
-1. run `npm install`
-2. run `npm run start`
+`npm install`
+`npm run start`
+
+## USING APPLICATION
+
+On the main route:
+
+  -to see full post: click on post title
+  -to see shorten description click on 'Read short description...'
+  
 
 ############################
 
